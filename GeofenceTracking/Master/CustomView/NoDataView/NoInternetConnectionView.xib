@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="LEE-5C-nrq" customClass="NoInternetConnectionView" customModule="noble" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="282-kK-GkE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_no_interent" translatesAutoresizingMaskIntoConstraints="NO" id="MBG-0N-5SC">
+                            <rect key="frame" x="15" y="162.66666666666663" width="345" height="256"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your internet connection or try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93p-JG-upM" customClass="GenericLabel" customModule="noble" customModuleProvider="target">
+                            <rect key="frame" x="15" y="495.99999999999994" width="345" height="39.333333333333314"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                            <color key="textColor" name="666666-666666"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No internet connection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwE-Ka-K2F">
+                            <rect key="frame" x="15" y="458.66666666666669" width="345" height="29.333333333333314"/>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7w-AD-vLA" customClass="GenericButton" customModule="noble" customModuleProvider="target">
+                            <rect key="frame" x="30" y="567.33333333333337" width="315" height="60"/>
+                            <color key="backgroundColor" name="8C51FF-8C51FF"/>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Try again">
+                                <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnTryAgainClicked:" destination="LEE-5C-nrq" eventType="touchUpInside" id="fCY-Ia-fSO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="MBG-0N-5SC" firstAttribute="leading" secondItem="282-kK-GkE" secondAttribute="leading" constant="15" id="8wF-74-35h"/>
+                        <constraint firstItem="F7w-AD-vLA" firstAttribute="top" secondItem="93p-JG-upM" secondAttribute="bottom" constant="32" id="C6U-Yz-RgQ"/>
+                        <constraint firstItem="MBG-0N-5SC" firstAttribute="centerX" secondItem="282-kK-GkE" secondAttribute="centerX" id="DGu-cW-lJN"/>
+                        <constraint firstItem="RwE-Ka-K2F" firstAttribute="leading" secondItem="93p-JG-upM" secondAttribute="leading" id="JmA-f2-Sbo"/>
+                        <constraint firstItem="RwE-Ka-K2F" firstAttribute="centerX" secondItem="282-kK-GkE" secondAttribute="centerX" id="Jrz-5Z-O9o"/>
+                        <constraint firstItem="93p-JG-upM" firstAttribute="top" secondItem="RwE-Ka-K2F" secondAttribute="bottom" constant="8" id="M6W-xz-bPZ"/>
+                        <constraint firstItem="93p-JG-upM" firstAttribute="centerX" secondItem="282-kK-GkE" secondAttribute="centerX" id="Zo7-gQ-pRm"/>
+                        <constraint firstItem="F7w-AD-vLA" firstAttribute="leading" secondItem="282-kK-GkE" secondAttribute="leading" constant="30" id="gES-zv-aCF"/>
+                        <constraint firstAttribute="trailing" secondItem="F7w-AD-vLA" secondAttribute="trailing" constant="30" id="h61-4D-bB8"/>
+                        <constraint firstItem="RwE-Ka-K2F" firstAttribute="top" secondItem="MBG-0N-5SC" secondAttribute="bottom" multiplier="1.09585" id="jJH-Hh-UUL"/>
+                        <constraint firstItem="93p-JG-upM" firstAttribute="leading" secondItem="MBG-0N-5SC" secondAttribute="leading" id="qRT-gc-Mny"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="8kY-cQ-lzo"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="282-kK-GkE" secondAttribute="bottom" id="KMu-xE-PU8"/>
+                <constraint firstItem="282-kK-GkE" firstAttribute="leading" secondItem="8kY-cQ-lzo" secondAttribute="leading" id="TL5-Zj-kZd"/>
+                <constraint firstItem="8kY-cQ-lzo" firstAttribute="trailing" secondItem="282-kK-GkE" secondAttribute="trailing" id="TPc-h5-wDq"/>
+                <constraint firstItem="93p-JG-upM" firstAttribute="centerY" secondItem="8kY-cQ-lzo" secondAttribute="centerY" multiplier="1.25" id="VAx-MW-Qgo"/>
+                <constraint firstItem="282-kK-GkE" firstAttribute="top" secondItem="LEE-5C-nrq" secondAttribute="top" id="kX3-dl-Ugg"/>
+                <constraint firstItem="F7w-AD-vLA" firstAttribute="height" secondItem="LEE-5C-nrq" secondAttribute="height" multiplier="0.0738916" id="mgE-Th-we5"/>
+            </constraints>
+            <connections>
+                <outlet property="btnTryAgain" destination="F7w-AD-vLA" id="yXF-zq-DDQ"/>
+                <outlet property="lblNoConnection" destination="RwE-Ka-K2F" id="owT-p2-Ygc"/>
+                <outlet property="lblNoInternet" destination="93p-JG-upM" id="pAJ-PU-HZP"/>
+            </connections>
+            <point key="canvasLocation" x="785" y="80"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_no_interent" width="258" height="256"/>
+        <namedColor name="666666-666666">
+            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="8C51FF-8C51FF">
+            <color red="0.5490196078431373" green="0.31764705882352939" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
