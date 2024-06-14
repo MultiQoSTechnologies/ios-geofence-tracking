@@ -18,5 +18,10 @@ Geofence tracking is an iOS project made with swift. This project uses iOS's Geo
 - Local notification
 
 
+### Let Us know
+For more details, visit [MultiQoS.](https://multiqos.com/)
 
+Contact us for collaboration or support:
+
+Email: biz@multiqos.com
 
